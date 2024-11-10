@@ -4,13 +4,13 @@
 using namespace std;
 
 void simulate_library(map<int, array<list<string>, 3>>& library, int days);
-void load_library();
-void save_library();
+void load_library(map<int, array<list<string>, 3>>& library);
+void save_library(const map<int, array<list<string>, 3>>& library);
 void display_menu();
-void add_book();
-void delete_book();
-void search_book();
-void list_books();
+void add_book(map<int, array<list<string>, 3>>& library);
+void delete_book(map<int, arrary<list<string>, 3>>& library);
+void search_book(const map<int, arrary<list<string>, 3>>& library);
+void list_books(const map<int, array<list<string>, 3>>& library);
 
 int main() {
     map<int, array<list<string>, 3>> library; 
@@ -80,3 +80,30 @@ void simulate_library(map<int, array<list<string>, 3>>& library, int days) {
 	}
 }
 
+void load_library(map<int, array<list<string>, 3>>& library){
+
+}
+
+void save_library(const map<int, array<list<string>, 3>>& library){
+
+}
+
+void display_menu(){
+
+}
+
+void add_book(map<int, array<list<string>, 3>>& library){
+
+}
+
+void delete_book(map<int, arrary<list<string>, 3>>& library){
+
+}
+
+void search_book(const map<int, arrary<list<string>, 3>>& library){
+
+}
+
+void list_books(const map<int, array<list<string>, 3>>& library){
+
+}
