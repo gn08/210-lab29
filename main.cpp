@@ -91,12 +91,15 @@ void load_library(map<int, array<list<string>, 3>>& library){
     string title, author, genre, year, availability;
     while (inFile >> id){
         inFile.ignore();
-        getline();
-        getline();
-        getline();
-        getline();
-        getline();
+        getline(inFile, title);
+        getline(inFile, author);
+        getline(inFile, genre);
+        getline(inFile, year);
+        getline(inFile, availability);
+
+        library[id] = {{title, author}, {genre, year}, {availability}};
     }
+    inFile.close();
 }
 
 void save_library(const map<int, array<list<string>, 3>>& library){
