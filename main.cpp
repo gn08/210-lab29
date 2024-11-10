@@ -1,8 +1,16 @@
 //include headers std::map, std::array, std::list
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
 void simulateLibraryOperations(std::map<int, std::array<std::list<std::string>, 3>>& library, int days) {
 	for (int day =1; day <= days; ++day){
 	//output day and status
+        cout << "Day: " << day << endl;
 	// add, delete, books
+        if (rand() % 2 == 0){
+            int new_id = library.size()+ 1;
+        }
 	//check out or return
 	//save data to history
 	//display changes
