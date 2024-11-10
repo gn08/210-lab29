@@ -81,7 +81,22 @@ void simulate_library(map<int, array<list<string>, 3>>& library, int days) {
 }
 
 void load_library(map<int, array<list<string>, 3>>& library){
+    ifstream inFile("library.txt")
+    if (!inFile) {
+        cout << "No file";
+        return;
+    }
 
+    int id;
+    string title, author, genre, year, availability;
+    while (inFile >> id){
+        inFile.ignore();
+        getline();
+        getline();
+        getline();
+        getline();
+        getline();
+    }
 }
 
 void save_library(const map<int, array<list<string>, 3>>& library){
