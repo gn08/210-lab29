@@ -18,9 +18,13 @@ void simulateLibraryOperations(std::map<int, std::array<std::list<std::string>, 
             }
         }
 	//check out or return
-
-	//save data to history
-	//display changes
+        for (auto& entry : library){
+            if(rand() % 4 == 0){
+                string& availability = entry.second[2].front();
+                availability = (availability == "Available")
+                cout << "Book id" << entry.first << " is now " << availability;
+            }
+        }
 	}
 }
 
