@@ -12,11 +12,18 @@ void simulateLibraryOperations(std::map<int, std::array<std::list<std::string>, 
 int main() {
     std::map<int, std::array<std::list<std::string>, 3>> library; 
 	//get the data from history
+    loadLibraryData(library);
 	//show the number for book, author name, title name, genre, year published, and availability
+    while (true){
+        displayMenu();
+        cout << "Enter choice: ";
+        cin >> user_choice;
+        cin.ignore;
+    }
 	while (true) {
 	//display menu options
 	//collect the input
-		switch (userChoice){
+		switch (user_choice){
 			Case 1:
 				//new book
 			Case 2:
