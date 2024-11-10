@@ -1,3 +1,15 @@
+Git link: https://github.com/gn08/210-lab29.git 
+
+Project Overview:
+My project is in charge of the library in order to manage book titles, author names, genres, and year published.  Another function of this project is to be able to add or delete books, as well as search for them, and lastly check if it is still in the library or not available.
+
+Implementation:
+ I plan to use std::map to manage data holding the number assorted to each individual book. Then the map will be correlated to an std::array for each entry which will hold title name, author name, genre, and year published, and if the book is available. A menu will be shown to the user: add, delete, search, books(list). There will be three std::list, one with the book title name and author name, second with genre and year published, and third with checking if the book is available.
+
+Stimulated Events:
+The stimulation will happen for 25 days and will display the options. For each time period the current situation will be shown as well as any changes. All changes will be saved for history purposes. 
+
+Sample Pseudocode:
 //include headers std::map, std::array, std::list
 void simulateLibraryOperations(std::map<int, std::array<std::list<std::string>, 3>>& library, int days) {
 	for (int day =1; day <= days; ++day){
