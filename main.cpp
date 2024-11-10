@@ -3,33 +3,17 @@
 #include <cstdlib>
 using namespace std;
 
-void simulateLibraryOperations(std::map<int, std::array<std::list<std::string>, 3>>& library, int days) {
-	for (int day =1; day <= days; ++day){
-	//output day and status
-        cout << "Day: " << day << endl;
-	// add, delete, books
-        if (rand() % 2 == 0){
-            int new_id = library.size()+ 1;
-        }
-        if (!library.empty() && rand() % 3 == 0){
-            int random_id = rand() % library.size() + 1;
-            if(library.erase(random_id)){
-                cout << "Delete book with id: " << random_id << endl;
-            }
-        }
-	//check out or return
-        for (auto& entry : library){
-            if(rand() % 4 == 0){
-                string& availability = entry.second[2].front();
-                availability = (availability == "Available")
-                cout << "Book id" << entry.first << " is now " << availability;
-            }
-        }
-	}
-}
+void simulate_library(map<int, array<list<string>, 3>>& library, int days);
+void load_library();
+void save_library();
+void display_menu();
+void add_book();
+void delete_book();
+void search_book();
+void list_books();
 
 int main() {
-    std::map<int, std::array<std::list<std::string>, 3>> library; 
+    map<int, array<list<string>, 3>> library; 
     int user_choice;
 	//get the data from history
     loadLibraryData(library);
@@ -69,3 +53,30 @@ int main() {
 	}
 	return 0;
 }
+
+
+void simulate_library(map<int, array<list<string>, 3>>& library, int days) {
+	for (int day =1; day <= days; ++day){
+	//output day and status
+        cout << "Day: " << day << endl;
+	// add, delete, books
+        if (rand() % 2 == 0){
+            int new_id = library.size()+ 1;
+        }
+        if (!library.empty() && rand() % 3 == 0){
+            int random_id = rand() % library.size() + 1;
+            if(library.erase(random_id)){
+                cout << "Delete book with id: " << random_id << endl;
+            }
+        }
+	//check out or return
+        for (auto& entry : library){
+            if(rand() % 4 == 0){
+                string& availability = entry.second[2].front();
+                availability = (availability == "Available")
+                cout << "Book id" << entry.first << " is now " << availability;
+            }
+        }
+	}
+}
+
