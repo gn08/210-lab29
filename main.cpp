@@ -11,7 +11,14 @@ void simulateLibraryOperations(std::map<int, std::array<std::list<std::string>, 
         if (rand() % 2 == 0){
             int new_id = library.size()+ 1;
         }
+        if (!library.empty() && rand() % 3 == 0){
+            int random_id = rand() % library.size() + 1;
+            if(library.erase(random_id)){
+                cout << "Delete book with id: " << random_id << endl;
+            }
+        }
 	//check out or return
+
 	//save data to history
 	//display changes
 	}
