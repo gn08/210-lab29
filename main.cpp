@@ -163,7 +163,22 @@ void delete_book(map<int, arrary<list<string>, 3>>& library){
 }
 
 void search_book(const map<int, arrary<list<string>, 3>>& library){
+    string word;
+    cout << "Enter title or author: ";
+    cin.ignore();
+    getline(cin, word);
 
+    for (const auto& entry : library){
+        if (entry.second[].front().find(word) != string::npos ||
+            entry.second[].back().find(word) != string::npos){
+            cout << "Book id: "
+            cout << "Title: "
+            cout << "Author: "
+            cout << "Genre: "
+            cout << "Year: "
+            cout << "Availability: "
+            }
+    }
 }
 
 void list_books(const map<int, array<list<string>, 3>>& library){
