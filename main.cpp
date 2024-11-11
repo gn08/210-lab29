@@ -125,7 +125,19 @@ void display_menu(){
 }
 
 void add_book(map<int, array<list<string>, 3>>& library){
+    int id;
+    string title;
+    string author;
+    string genre;
+    string year;
+    string availability;
+    availability = "Available";
 
+    cout << "Enter id: ";
+    cin >> id;
+    cin.ignore();
+
+    
 }
 
 void delete_book(map<int, arrary<list<string>, 3>>& library){
