@@ -103,7 +103,11 @@ void load_library(map<int, array<list<string>, 3>>& library){
 }
 
 void save_library(const map<int, array<list<string>, 3>>& library){
-
+    ofstream outFile("library.txt");
+    for(const auto& entry : library){
+        outFile << entry.first << endl;
+        outFile <<
+    }
 }
 
 void display_menu(){
