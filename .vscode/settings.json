@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "map": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "array": "cpp"
     }
 }
