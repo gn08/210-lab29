@@ -6,6 +6,7 @@
 #include <ctime>
 #include <string>
 #include <cstdlib>
+#include <fstream>
 using namespace std;
 
 void simulate_library(map<int, array<list<string>, 3>>& library, int days);
@@ -13,15 +14,15 @@ void load_library(map<int, array<list<string>, 3>>& library);
 void save_library(const map<int, array<list<string>, 3>>& library);
 void display_menu();
 void add_book(map<int, array<list<string>, 3>>& library);
-void delete_book(map<int, arrary<list<string>, 3>>& library);
-void search_book(const map<int, arrary<list<string>, 3>>& library);
+void delete_book(map<int, array<list<string>, 3>>& library);
+void search_book(const map<int, array<list<string>, 3>>& library);
 void list_books(const map<int, array<list<string>, 3>>& library);
 
 int main() {
     map<int, array<list<string>, 3>> library; 
     int user_choice;
 	//get the data from history
-    loadLibraryData(library);
+    load_library(library);
 	//show the number for book, author name, title name, genre, year published, and availability
 	while (true) {
 	//display menu options
@@ -155,7 +156,7 @@ void add_book(map<int, array<list<string>, 3>>& library){
     cout << "Book added" << endl;
 }
 
-void delete_book(map<int, arrary<list<string>, 3>>& library){
+void delete_book(map<int, array<list<string>, 3>>& library){
     int id;
     cout << "Enter id to delete: ";
     cin >> id;
@@ -167,7 +168,7 @@ void delete_book(map<int, arrary<list<string>, 3>>& library){
     }
 }
 
-void search_book(const map<int, arrary<list<string>, 3>>& library){
+void search_book(const map<int, array<list<string>, 3>>& library){
     string word;
     cout << "Enter title or author: ";
     cin.ignore();
