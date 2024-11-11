@@ -162,7 +162,7 @@ void delete_book(map<int, array<list<string>, 3>>& library){
     cin >> id;
 
     if(library.erase(id)){
-        cout << "Book deleted"
+        cout << "Book deleted";
     } else {
         cout << "Book non-existent";
     }
