@@ -106,13 +106,22 @@ void save_library(const map<int, array<list<string>, 3>>& library){
     ofstream outFile("library.txt");
     for(const auto& entry : library){
         outFile << entry.first << endl;
-        outFile << entry.second[0].front() << endl.
-        outFile << entry.second[0].back()
+        outFile << entry.second[0].front() << endl;
+        outFile << entry.second[0].back() << endl;
+        outFile << entry.second[1].front() << endl;
+        outFile << entry.second[1].back() << endl;
+        outFile << entry.second[2].front() << endl;
     }
+    outFile.close();
 }
 
 void display_menu(){
-
+    cout << "Library: "
+        << "1. New book" << endl
+        << "2. Delete book" << endl
+        << "3. Search book" << endl
+        << "4. List books" << endl
+        << "5. Quit";
 }
 
 void add_book(map<int, array<list<string>, 3>>& library){
