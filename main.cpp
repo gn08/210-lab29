@@ -26,11 +26,11 @@ int main() {
 	//show the number for book, author name, title name, genre, year published, and availability
 	while (true) {
 	//display menu options
-        displayMenu();
+        display_menu();
         cout << "Enter choice: ";
 	//collect the input
         cin >> user_choice;
-        cin.ignore;
+        cin.ignore();
 		switch (user_choice){
 			case 1:
 				//new book
@@ -49,7 +49,7 @@ int main() {
                 list_books(library);
                 break;
 			case 5:
-                save_data(library);
+                save_library(library);
                 cout << "Exit";
                 return 0;
 				//quit/stop
@@ -79,7 +79,7 @@ void simulate_library(map<int, array<list<string>, 3>>& library, int days) {
         for (auto& entry : library){
             if(rand() % 4 == 0){
                 string& availability = entry.second[2].front();
-                availability = (availability == "Available")
+                availability = (availability == "Available") ? "Checked out" : "Available";
                 cout << "Book id" << entry.first << " is now " << availability;
             }
         }
@@ -87,7 +87,7 @@ void simulate_library(map<int, array<list<string>, 3>>& library, int days) {
 }
 
 void load_library(map<int, array<list<string>, 3>>& library){
-    ifstream inFile("library.txt")
+    ifstream inFile("library.txt");
     if (!inFile) {
         cout << "No file";
         return;
