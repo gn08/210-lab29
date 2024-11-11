@@ -174,8 +174,8 @@ void search_book(const map<int, arrary<list<string>, 3>>& library){
     getline(cin, word);
 
     for (const auto& entry : library){
-        if (entry.second[].front().find(word) != string::npos ||
-            entry.second[].back().find(word) != string::npos){
+        if (entry.second[0].front().find(word) != string::npos ||
+            entry.second[0].back().find(word) != string::npos){
             cout << "Book id: " << entry.first << endl;
             cout << "Title: " << entry.second[0].front() << endl;
             cout << "Author: " << entry.second[0].back() << endl;
