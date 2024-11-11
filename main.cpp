@@ -137,11 +137,29 @@ void add_book(map<int, array<list<string>, 3>>& library){
     cin >> id;
     cin.ignore();
 
-    
+    cout << "Book Title: "   ;
+    getline(cin, title);
+    cout << "Author Name: ";
+    getline(cin, author);
+    cout << "Genre: ";
+    getline(cin, genre);
+    cout << "Publication year: ";
+    getline(cin, year);
+
+    library[id] = {{title, author}, {genre, year}, {availability}};
+    cout << "Book added" << endl;
 }
 
 void delete_book(map<int, arrary<list<string>, 3>>& library){
+    int id;
+    cout << "Enter id to delete: ";
+    cin >> id;
 
+    if(library.erase(id)){
+        cout << "Book deleted"
+    } else {
+        cout << "Book non-existent";
+    }
 }
 
 void search_book(const map<int, arrary<list<string>, 3>>& library){
