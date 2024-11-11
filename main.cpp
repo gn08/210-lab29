@@ -106,7 +106,8 @@ void save_library(const map<int, array<list<string>, 3>>& library){
     ofstream outFile("library.txt");
     for(const auto& entry : library){
         outFile << entry.first << endl;
-        outFile <<
+        outFile << entry.second[0].front() << endl.
+        outFile << entry.second[0].back()
     }
 }
 
