@@ -1,5 +1,10 @@
 //include headers std::map, std::array, std::list
 #include <iostream>
+#include <map> 
+#include <array>
+#include <list>
+#include <ctime>
+#include <string>
 #include <cstdlib>
 using namespace std;
 
@@ -182,5 +187,13 @@ void search_book(const map<int, arrary<list<string>, 3>>& library){
 }
 
 void list_books(const map<int, array<list<string>, 3>>& library){
-
+    cout << "All books";
+    for (const auto& entry: library) {
+        cout << "Book id: " << entry.first << endl;
+        cout << "Title: " << entry.second[0].front() << endl;
+        cout << "Author: " << entry.second[0].back() << endl;
+        cout << "Genre: " << entry.second[1].front() << endl;
+        cout << "Year: " << entry.second[1].back() << endl;
+        cout << "Availability: " << entry.second[2].front() << endl;
+    }
 }
