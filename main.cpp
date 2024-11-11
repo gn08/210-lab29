@@ -103,7 +103,7 @@ void load_library(map<int, array<list<string>, 3>>& library){
         getline(inFile, year);
         getline(inFile, availability);
 
-        library[id] = {{title, author}, {genre, year}, {availability}};
+        library[id] = {list<string>{title, author}, list<string>{genre, year}, list<string>{availability}};
     }
     inFile.close();
 }
@@ -152,7 +152,7 @@ void add_book(map<int, array<list<string>, 3>>& library){
     cout << "Publication year: ";
     getline(cin, year);
 
-    library[id] = {{title, author}, {genre, year}, {availability}};
+    library[id] = {list<string>{title, author}, list<string>{genre, year}, list<string>{availability}};
     cout << "Book added" << endl;
 }
 
