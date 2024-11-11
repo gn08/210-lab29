@@ -171,12 +171,12 @@ void search_book(const map<int, arrary<list<string>, 3>>& library){
     for (const auto& entry : library){
         if (entry.second[].front().find(word) != string::npos ||
             entry.second[].back().find(word) != string::npos){
-            cout << "Book id: "
-            cout << "Title: "
-            cout << "Author: "
-            cout << "Genre: "
-            cout << "Year: "
-            cout << "Availability: "
+            cout << "Book id: " << entry.first << endl;
+            cout << "Title: " << entry.second[0].front() << endl;
+            cout << "Author: " << entry.second[0].back() << endl;
+            cout << "Genre: " << entry.second[1].front() << endl;
+            cout << "Year: " << entry.second[1].back() << endl;
+            cout << "Availability: " << entry.second[2].front() << endl;
             }
     }
 }
